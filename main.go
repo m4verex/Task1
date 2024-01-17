@@ -21,7 +21,9 @@ func main() {
 	if len(textSplit) > 3 {
 		log.Panicln("Выдача паники, так как формат математической операции не удовлетворяет заданию — два операнда и один оператор (+, -, /, *).")
 	}
-
+	 if len(textSplit) <3 {
+		log.Panicln("Выдача паники, так как строка не является математической операцией.")
+	 }
 	a, isRomanA := isDigit(textSplit[0])
 	b, isRomanB := isDigit(textSplit[2])
 
